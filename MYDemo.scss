@@ -32,76 +32,6 @@ body {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    margin: 0;
-  }
-}
-
-@media screen and (max-width:768px) {
-  nav {
-    float: right;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navTrigger {
-    display: block;
-
-  }
-
-  .nav div.logo {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .nav div.main_list {
-    padding: 0;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-
-  }
-
-  .nav div.show_list {
-    height: auto;
-    display: none;
-  }
-
-  .nav div.main_list ul {
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 60vh;
-    transition: all 0.7s ease-in-out;
-
-
-    background-color: $primary-color;
-    /*same background color of navbar*/
-    // background-position: center top;
-  }
-
-  .nav div.main_list ul li a {
-    width: 100%;
-    display: flex;
-    font-size: 2rem;
-    padding: 25px;
-    justify-content: space-between;
-
-  }
-
-  .nav div.media_button {
-    display: block;
-  }
-
-}
-
-
-
 .nav {
   position: fixed;
   top: 40%;
@@ -186,15 +116,6 @@ body {
 
 
 
-@media screen and (max-width:987px) {
-  .projects-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-
 .project-showcase {
   max-width: 100%;
   margin: 0 auto;
@@ -240,7 +161,6 @@ body {
   .projects {
     display: flex;
     flex-wrap: wrap;
-    padding: 100px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -260,11 +180,8 @@ body {
 
       img {
         height: 100%;
-        width: 100%;
-        // filter: brightness(.4);
+        max-width: 100%;
         opacity: 0.6;
-
-
         object-position: center;
       }
 
@@ -326,12 +243,13 @@ body {
       }
     }
   }
-  
+
   @media (max-width: 768px) {
     .projects {
       padding: 20px;
 
       .project-card {
+        display: block;
         width: 100%;
         margin: 10px 0;
       }
@@ -563,7 +481,7 @@ body {
   overflow: hidden;
 
   .glitch__item {
-    background: url('img/k.jpg') no-repeat 50% 50% / cover;
+    background: url('img\20220811_215255.jpg.jpg') no-repeat 50% 50% / cover;
     background-attachment: fixed;
 
     height: 100%;

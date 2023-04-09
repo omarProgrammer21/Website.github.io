@@ -8,21 +8,28 @@
     <title></title>
 </head>
 <body>
-    <div id="container">
-        <span id="text1"></span>
-        <span id="text2"></span>
-    </div>
-    
-    <svg id="filters">
-        <defs>
-            <filter id="threshold">
-                <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-                      0 1 0 0 0
-                      0 0 1 0 0
-                      0 0 0 255 -140" />
-            </filter>
-        </defs>
-    </svg>  
-    <script src="MYDemo.js"></script>
+    <div class="thank-you">
+        <div class="message-container">
+          <h1>Thank You!</h1>
+          <p>Your message has been sent.</p>
+          <a href="index.html" class="btn">Return to Home</a>
+        </div>
+      </div>
+      
+    <script>// Get the thank you message container
+        const messageContainer = document.querySelector('.thank-you');
+        
+        // Check if the thank you message container exists
+        if (messageContainer) {
+          // Hide the thank you message container initially
+          messageContainer.style.opacity = 0;
+        
+          // Show the thank you message container with animation
+          setTimeout(() => {
+            messageContainer.style.display = 'block';
+            messageContainer.classList.add('animated', 'fadeIn');
+          }, 1000);
+        }
+        </script>
 </body>
 </html>

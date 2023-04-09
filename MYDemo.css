@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -14,11 +15,12 @@ a:-webkit-any-link {
 
 body {
   font-family: "Amatic SC", cursive;
-  background-color: #111111;
   color: #cccccc;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #780206; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .nav {
@@ -33,7 +35,7 @@ body {
   height: 100px;
   width: 5px;
   background-color: rgba(17, 17, 17, 0);
-  padding: 20px;
+  padding: 5px;
 }
 .nav ul li {
   writing-mode: vertical-rl;
@@ -45,6 +47,7 @@ body {
   display: block;
   color: #cccccc;
   font-size: 20px;
+  font-weight: bold;
 }
 .nav ul li a:hover {
   color: #ffffff;
@@ -63,7 +66,7 @@ body {
   width: 5px;
   background-color: rgba(17, 17, 17, 0);
   opacity: 0.5;
-  padding: 20px;
+  padding: 5px;
 }
 .social-panel-2 a {
   display: block;
@@ -85,8 +88,9 @@ body {
 }
 .about .about-text {
   color: #cccccc;
-  font-size: 17px;
   text-align: center;
+  font-weight: lighter;
+  line-height: 40px;
 }
 
 .project-showcase {
@@ -112,12 +116,13 @@ body {
   font-size: 1.2rem;
   color: #fff;
   border: 3px solid #cccccc;
-  background-color: #111111;
+  background-color: transparent;
   cursor: pointer;
   transition: background-color 0.2s ease-out;
 }
 .project-showcase .filter-bar .filter-btn:hover {
   background-color: #cccccc;
+  color: #000;
 }
 .project-showcase .filter-bar .filter-btn.active {
   background-color: #cccccc;
@@ -131,7 +136,7 @@ body {
 }
 .project-showcase .projects .project-card {
   border-radius: 15px;
-  background: -webkit-linear-gradient(rgba(24, 20, 51, 0.8), rgba(255, 255, 255, 0.8));
+  background: -webkit-linear-gradient(to right, #061161, #780206);
   height: 300px;
   width: 500px;
   margin: 10px;
@@ -168,6 +173,7 @@ body {
 .project-showcase .projects .project-card .project-details p {
   text-align: center;
   padding: 20px;
+  font-family: "Dosis", sans-serif;
 }
 .project-showcase .projects .project-card .project-details .project-links {
   display: flex;
@@ -194,16 +200,6 @@ body {
 .project-showcase .projects .project-card:hover .project-details {
   opacity: 1;
 }
-@media (max-width: 768px) {
-  .project-showcase .projects {
-    padding: 20px;
-  }
-  .project-showcase .projects .project-card {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-  }
-}
 
 #blog {
   text-align: center;
@@ -225,55 +221,61 @@ body {
 .Contact {
   text-align: center;
   padding: 200px 100px;
-  color: #cccccc;
 }
 .Contact h1 {
   margin-bottom: 30px;
   color: #cccccc;
 }
 .Contact form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
-.Contact label {
-  width: 100%;
-  margin-bottom: 10px;
+.Contact .form-group {
+  margin-bottom: 20px;
 }
 .Contact input[type=text],
 .Contact input[type=email],
 .Contact textarea {
-  font-family: "Amatic SC", cursive;
-  font-size: large;
-  background-color: #111111;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  font-family: inherit;
   color: #cccccc;
-  width: 40%;
-  padding: 20px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
+  background-color: transparent;
+  transition: border-color 0.2s ease;
 }
-.Contact button {
-  top: 50%;
-  left: 50%;
-  width: 100px;
-  height: 40px;
-  line-height: 1;
-  letter-spacing: 1px;
-  font-family: "Amatic SC", cursive;
+.Contact input[type=text]:focus,
+.Contact input[type=email]:focus,
+.Contact textarea:focus {
+  outline: none;
+  border-color: #4d90fe;
+}
+.Contact button[type=submit] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
   font-weight: bold;
-  border: 3px solid #cccccc;
-  background: #111111;
   color: #cccccc;
-  border-radius: 40px;
+  background-color: transparent;
   cursor: pointer;
-  overflow: hidden;
-  transition: all 0.35s;
+  transition: background-color 0.2s ease;
+  color: #fff;
+  border: 3px solid #cccccc;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  border-radius: 40px;
 }
-.Contact button:hover {
-  background: #cccccc;
-  color: #111111;
+.Contact button[type=submit]:hover {
+  background-color: #cccccc;
 }
 
 .cv-nav {
@@ -379,7 +381,7 @@ body {
   overflow: hidden;
 }
 .glitch .glitch__item {
-  background: url("img/img.jpg") no-repeat 50% 50%/cover;
+  background: url("") no-repeat 50% 50%/cover;
   background-attachment: fixed;
   height: 100%;
   width: 100%;
@@ -454,67 +456,67 @@ body {
 }
 @keyframes glitch-anim {
   0% {
-    clip: rect(42px, 9999px, 98px, 0);
+    clip: rect(129px, 9999px, 40px, 0);
   }
   5% {
-    clip: rect(45px, 9999px, 152px, 0);
+    clip: rect(19px, 9999px, 63px, 0);
   }
   10% {
-    clip: rect(141px, 9999px, 32px, 0);
+    clip: rect(76px, 9999px, 94px, 0);
   }
   15% {
-    clip: rect(126px, 9999px, 70px, 0);
+    clip: rect(57px, 9999px, 105px, 0);
   }
   20% {
-    clip: rect(127px, 9999px, 76px, 0);
+    clip: rect(61px, 9999px, 40px, 0);
   }
   25% {
-    clip: rect(75px, 9999px, 84px, 0);
+    clip: rect(67px, 9999px, 88px, 0);
   }
   30% {
-    clip: rect(138px, 9999px, 142px, 0);
+    clip: rect(35px, 9999px, 150px, 0);
   }
   35% {
-    clip: rect(143px, 9999px, 10px, 0);
+    clip: rect(93px, 9999px, 145px, 0);
   }
   40% {
-    clip: rect(127px, 9999px, 134px, 0);
+    clip: rect(27px, 9999px, 69px, 0);
   }
   45% {
-    clip: rect(122px, 9999px, 26px, 0);
+    clip: rect(147px, 9999px, 3px, 0);
   }
   50% {
-    clip: rect(152px, 9999px, 156px, 0);
+    clip: rect(146px, 9999px, 157px, 0);
   }
   55% {
-    clip: rect(53px, 9999px, 129px, 0);
+    clip: rect(129px, 9999px, 104px, 0);
   }
   60% {
-    clip: rect(44px, 9999px, 78px, 0);
+    clip: rect(98px, 9999px, 77px, 0);
   }
   65% {
-    clip: rect(52px, 9999px, 115px, 0);
+    clip: rect(105px, 9999px, 86px, 0);
   }
   70% {
-    clip: rect(77px, 9999px, 64px, 0);
+    clip: rect(76px, 9999px, 93px, 0);
   }
   75% {
-    clip: rect(138px, 9999px, 153px, 0);
+    clip: rect(124px, 9999px, 138px, 0);
   }
   80% {
-    clip: rect(37px, 9999px, 127px, 0);
+    clip: rect(154px, 9999px, 127px, 0);
   }
   85% {
-    clip: rect(149px, 9999px, 80px, 0);
+    clip: rect(98px, 9999px, 91px, 0);
   }
   90% {
-    clip: rect(139px, 9999px, 117px, 0);
+    clip: rect(23px, 9999px, 19px, 0);
   }
   95% {
-    clip: rect(103px, 9999px, 43px, 0);
+    clip: rect(90px, 9999px, 60px, 0);
   }
   100% {
-    clip: rect(32px, 9999px, 33px, 0);
+    clip: rect(64px, 9999px, 56px, 0);
   }
 }
 @keyframes glitch-anim-2 {
@@ -721,5 +723,84 @@ body {
     transform: translate3d(0, 0, 0);
     -webkit-clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+}
+
+.project-showcase {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.project-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+
+.project-details p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .project-details h2 {
+    font-size: 1.2rem;
+  }
+  .project-details p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 480px) {
+  .project-showcase {
+    padding: 20px;
+  }
+  .filter-bar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .filter-btn {
+    flex-basis: 30%;
+    margin-bottom: 10px;
+  }
+  .project-card {
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=MYDemo.css.map */

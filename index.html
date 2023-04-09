@@ -10,10 +10,10 @@
 
   <link rel="stylesheet" href="https://kit.fontawesome.com/feb72a14ae.css" crossorigin="anonymous" />
 
-  <head>
-
     <script src="https://kit.fontawesome.com/6b68b342d9.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 
   </head>
 
@@ -63,14 +63,10 @@
     <h1>About</h1>
     <br />
     <div class="about-text">
-      <h3>
-        Hello, I am Omar Farahat, an IT Engineering student with a specialization in IoT at Savonia UAS. My studies have
-        equipped me with a wealth of experience in software development, and I have developed a keen interest in web
-        development, particularly the front-end aspect. I am passionate about honing my skills through practical
-        projects and always eager to learn and explore new horizons. </h3>
+      <h3 style="font-family: 'Dosis', sans-serif;">
+        Hello, My name is Omar , i am currently studying IT Engineering with a specialization in IoT at Savonia UAS. My studies have opened up a world of opportunities for me in the software development field, and I've developed a keen interest in web development, especially the front-end side. I'm passionate about taking on exciting projects and building up my skills through hands-on experience. Whether it's learning a new programming language or exploring new possibilities in the field, I'm always eager to push my limits and grow as a developer .  </h3>
     </div>
     </div>
-
 
   </section>
 
@@ -78,28 +74,30 @@
   <!-- ................................................................................................... -->
 
 
-  <section class="project-showcase" id="projects">
+  <section class="project-showcase " id="projects">
     <h1>My Projects</h1>
     <div class="filter-bar">
       <button class="filter-btn active">All</button>
       <button class="filter-btn">Web Development</button>
       <button class="filter-btn">IoT</button>
+      <button class="filter-btn">Others</button>
+
     </div>
     <section class="projects">
-      <div class="project-card" data-category="Web Development">
+      <div class="project-card project-animation" data-category="Web Development" >
 
-        <img src="img/web.png" alt="Personal Website">
+         <img src="img/Screenshot (39).png" alt="Personal Website">
         <div class="project-details">
           <h2>Personal Website</h2>
           <p>Developed a personal website using front-end technologies such as HTML, SASS, and JavaScript. The website
             showcases my skills, experience, and projects in a visually appealing and user-friendly manner. </p>
           <div class="project-links">
-            <a target="_blank" href="#" class="view-project-btn"><i class="fas fa-eye"></i>View Project</a>
+            <a target="_blank" href="www.omarfarahat.com" class="view-project-btn"><i class="fas fa-eye"></i>View Project</a>
             <a target="_blank" href="#" class="github-link"><i class="fab fa-github"></i>GitHub</a>
           </div>
         </div>
       </div>
-      <div class="project-card" data-category="Web Development">
+      <div class="project-card project-animation" data-category="Web Development">
         <img src="img/sunnyside.png" alt="sunnyside agancy">
         <div class="project-details">
           <h2>Sunnyside Agancy UI</h2>
@@ -107,14 +105,14 @@
             effectively communicates the brand's message and values through its intuitive design and seamless navigation
           </p>
           <div class="project-links">
-            <a target="_blank" href="https://omarfarahat.com/sunnyside.github.io/" class="view-project-btn"><i
+            <a target="_blank" href="https://omarprogrammer21.github.io/sunnyside.github.io/" class="view-project-btn"><i
                 class="fas fa-eye"></i>View Project</a>
             <a target="_blank" href="https://github.com/omarProgrammer21/sunnyside.github.io" class="github-link"><i
                 class="fab fa-github"></i>GitHub</a>
           </div>
         </div>
       </div>
-      <div class="project-card" data-category="IoT">
+      <div class="project-card project-animation" data-category="IoT">
         <img src="img/Face-Mask-Detection-using-RetinaNet-Model.webp" alt="Project 1">
         <div class="project-details">
           <h2>Face Mask Detection</h2>
@@ -126,7 +124,7 @@
           </div>
         </div>
       </div>
-      <div class="project-card" data-category="IoT">
+      <div class="project-card project-animation " data-category="IoT">
         <img src="img/Iiwari_System_Map-2.gif" alt="Project 1">
         <div class="project-details">
           <h2>indoor positioning system</h2>
@@ -158,20 +156,21 @@
   <!-- //////////////////////////////////////////////////////////////////////////////////// -->
 
   <section class="Contact" id="contact">
-    <h1>Contact me </h1>
-    <form action="https://formsubmit.co/omarfarahat121@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-
-
-      <input type="text" id="name" name="name" placeholder="Name" required>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-      <textarea type="message" id="message" name="message" placeholder="Message"></textarea>
-      <br>
-      <button type="submit"><span>Send</span></button>
-      <input type="hidden" name="_next" value="thanksPage.html">
-
-
+    <h1>let's get in touch !</h1>
+    <form method="post" action="submit-form.php">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit">Send </button>
     </form>
+    
+    
   </section>
 
 
@@ -180,6 +179,20 @@
 
 
   <script src="MYDemo.js"></script>
+
+  <script>
+    ScrollReveal().reveal('.project-animation', {
+      delay: 200,
+      duration: 1000,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      distance: '50px',
+      interval: 200,
+      reset: true,
+      mobile: true
+    });
+  </script>
+  
 
 </body>
 

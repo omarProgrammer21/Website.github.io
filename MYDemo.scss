@@ -78,7 +78,7 @@ body {
 
 .social-panel-2 {
   position: fixed;
-  top: 50%;
+  top: 70%;
   left: 20px;
   transform: translateY(-50%);
   display: flex;
@@ -120,6 +120,24 @@ body {
     text-align: center;
     font-weight: lighter;
     line-height: 40px;
+  }
+  .wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
   }
 
 }
@@ -632,12 +650,19 @@ body {
   max-width: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 
   .glitch__item {
-    background: url('') no-repeat 50% 50% / cover;
+    background: url('img/k\ \(2\).jpg') no-repeat 50% 50% / cover;
+    @media (max-width:749px)  {
+      background: url('img/k\ \(4\).jpg') no-repeat 50% 50% / cover;
+      
+
+    }
+    
 
     background-attachment: fixed;
 
@@ -646,6 +671,20 @@ body {
     top: 0;
     left: 0;
     position: absolute;
+  }
+  h3{
+    text-align: center;
+    display: block;
+    padding: 20px 50px 20px 50px;
+
+    @media (max-width:749px)  {
+      h3{
+        color: $secondary-color;
+
+
+      }
+
+    }
   }
 
   .glitch__item:nth-child(n+2) {
@@ -696,16 +735,21 @@ body {
   }
 
   .glitch__title {
-    // font-family: 'Bungee', cursive;
     font-size: 200px;
     letter-spacing: 7px;
-    color: #ffffff;
     position: relative;
     text-transform: uppercase;
 
+    @media (max-width:749px)  {
+      font-size: 100px;
+      letter-spacing: 5px;
+
+    }
+
+
     &:before,
     &:after {
-      content: 'Omar';
+      content: 'OMAR';
       position: absolute;
       left: 0;
       top: 0;
@@ -723,7 +767,7 @@ body {
 
     &:after {
       left: -2px;
-      text-shadow: -1px 0 #fe3a7f;
+      text-shadow: -1px 0 #9d2b2d;
       clip: rect(85px, 550px, 140px, 0);
       animation: glitch-anim 2s 1s linear infinite alternate-reverse;
     }
@@ -1183,3 +1227,7 @@ body {
   }
 
 }
+
+
+
+
